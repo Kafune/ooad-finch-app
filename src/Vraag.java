@@ -3,5 +3,7 @@ public abstract class Vraag {
     private String vraag;
 
     public abstract Vraag getVraag(String vraagnummer);
-    public abstract boolean controleerAntwoord(String antwoord);
+    public Vraag getVraagType() {
+        return null;
+    }
 }
