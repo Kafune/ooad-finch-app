@@ -1,12 +1,11 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MockVragenlijst {
     private List<Vraag> vragen = new ArrayList<>();
 
     private Vraag vraag1 = new OpenVraag("Welke reggae zanger stierf op 11 mei 1981?", new ArrayList<>() {{
-        add("bob marley");
+        add("Bob Marley");
     }});
 
     private Vraag vraag2 = new MeerkeuzeVraag("Met welk liedje brak Justin Bieber door bij het grote publiek?", new ArrayList<>() {{
@@ -17,12 +16,19 @@ public class MockVragenlijst {
     }}, "B");
 
     private Vraag vraag3 = new OpenVraag("Welke band stond in 2020 in de hitparade met het nummer Soldier On?", new ArrayList<>() {{
-        add("direct");
-        add("di-rect");
+        add("Direct");
+        add("Di-Rect");
     }});
 
-//    private Vraag vraag4 = new OpenVraag();
-//    private Vraag vraag5 = new OpenVraag();
+    private Vraag vraag4 = new OpenVraag("Wie bracht in 2015 de monsterhit \"Love Me like You Do\" uit?",
+            new ArrayList<>() {{
+                add("Ellie Goudling");
+                add("Elena Jane Goulding");
+    }});
+    private Vraag vraag5 = new OpenVraag("Welke Zuid-Koreaanse band is de populairste K-popgroep ter wereld?", new ArrayList<>(){{
+        add("BTS");
+        add("Bangtan Sonyeondan");
+    }});
     private Vraag vraag6 = new MeerkeuzeVraag("Welke band staat het vaakst in de Top 2000 van 2022?", new ArrayList<>() {{
         add("A. The Beatles");
         add("B. Coldplay");
@@ -35,8 +41,13 @@ public class MockVragenlijst {
         add("C. Rossini");
         add("D. Verdi");
     }},"D");
-//    private Vraag vraag8 = new OpenVraag();
-//    private Vraag vraag9 = new OpenVraag();
+    private Vraag vraag8 = new OpenVraag("Wat is de muzikale term voor \"zang zonder instrumentale begeleiding\"?", new ArrayList<>(){{
+        add("A Capella");
+        add("Acapella");
+    }});
+    private Vraag vraag9 = new OpenVraag("Welke Britse singer-songwriter ken je van grote hits als \"Perfect\", \"Shape of You\" en \"Galway girl\"?", new ArrayList<>(){{
+        add("Ed Sheeran");
+    }});
     private Vraag vraag10 = new MeerkeuzeVraag("Wat is de eerste opening thema die in de japanse televisieserie One Piece wordt afgespeeld?", new ArrayList<>() {{
         add("A. Wake Up!");
         add("B. Brand New World");
@@ -48,12 +59,12 @@ public class MockVragenlijst {
         vragen.add(vraag1);
         vragen.add(vraag2);
         vragen.add(vraag3);
-//        vragen.add(vraag4);
-//        vragen.add(vraag5);
+        vragen.add(vraag4);
+        vragen.add(vraag5);
         vragen.add(vraag6);
         vragen.add(vraag7);
-//        vragen.add(vraag8);
-//        vragen.add(vraag9);
+        vragen.add(vraag8);
+        vragen.add(vraag9);
         vragen.add(vraag10);
         return vragen;
     }
