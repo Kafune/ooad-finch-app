@@ -3,38 +3,27 @@ import java.util.List;
 public class Vragenlijst {
     int vragenlijstNummer;
     List<Vraag> vragen;
+    String onderwerp;
 
-    Vragenlijst() {
-        MockVragenlijst mockVragenlijst = new MockVragenlijst();
-        vragen = mockVragenlijst.getNieuweVragenlijst();
-        vragenlijstNummer = 1;
+    Vragenlijst(int vragenlijstNummer, String onderwerp, List<Vraag> vragen) {
+        this.vragenlijstNummer = vragenlijstNummer;
+        this.onderwerp = onderwerp;
+        this.vragen = vragen;
     }
 
-    public int getVragenlijstNummer() {
-        return vragenlijstNummer;
+    public Vragenlijst getVragenlijst(String naamVragenlijst) {
+        if(this.onderwerp.equals(naamVragenlijst)) {
+            return this;
+        }
+        return null;
     }
     public List<Vraag> getVragen() {
         return vragen;
     }
 
-//    private String onderwerp;
-//
-//    private double prijs;
-//
-//    private Finch finch;
-//
-//    private Thema thema;
-//
-//    private Vraag[] vraag;
-//
-//    private VragenlijstDetails[] vragenlijstDetails;
-//
-//    public double getPrijs() {
-//        return 0;
-//    }
-//
-//    public Vragenlijst getVragenlijst(String naamVragenlijst) {
-//        return null;
-//    }
+    public void setVragenlijst(List<Vraag> vragen) {
+        this.vragen = vragen;
+    }
+
 
 }

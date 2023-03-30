@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MockVragenlijst {
+public class MockData {
     private List<Vraag> vragen = new ArrayList<>();
 
     private Vraag vraag1 = new OpenVraag("Welke reggae zanger stierf op 11 mei 1981?", new ArrayList<>() {{
@@ -66,6 +66,7 @@ public class MockVragenlijst {
         vragen.add(vraag8);
         vragen.add(vraag9);
         vragen.add(vraag10);
+
         return vragen;
     }
 }

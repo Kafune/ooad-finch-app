@@ -1,35 +1,32 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 public class Finch {
 
-    private Account account;
+    private Account acc;
     private Vragenlijst vl;
+
+    private MockData mockData;
 
     Finch(){
         Date date;
         Calendar c = Calendar.getInstance();
                 c.add(Calendar.YEAR, 1);
         date = c.getTime();
-        System.out.println(date);
-        account = new Account("Steven", "password", "steven@test.nl");
-        account.setSaldo(100);
-        vl = new Vragenlijst();
-        account.voegVragenlijstToe(vl.getVragen(), date);
+//        account.voegVragenlijstToe(vl.getVragen(), date);
     }
-    public void startQuiz(String gebruikersnaam) {
-        account = account.getAccount(gebruikersnaam);
-//        vl = account.getVragenlijsten();
+    public void startQuiz(String gebruikersnaam, String naamVragenlijst) {
+        vl = vl.getVragenlijst(naamVragenlijst);
+        acc = getAccount(gebruikersnaam);
 //        return vl;
     }
-    public Account getAccount() {
-        return account;
+
+    public Account getAccount(String gebruikersnaam) {
+
     }
 
-//    private List<Vragenlijst> getVragenlijsten() {
-//        return null;
-//    }
+    public Vragenlijst getVragenlijst(String naamVragenlijst) {
+
+    }
 }
