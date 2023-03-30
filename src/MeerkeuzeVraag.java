@@ -2,15 +2,17 @@ import java.util.List;
 
 public class MeerkeuzeVraag extends Vraag {
     private String vraag;
-    private String[] antwoorden;
+    private List<String> antwoorden;
     private String juisteAntwoord;
 
     public MeerkeuzeVraag(String huidigeVraag, List<String> antwoorden, String correctAntwoord) {
-
+        this.vraag = huidigeVraag;
+        this.antwoorden = antwoorden;
+        this.juisteAntwoord = correctAntwoord;
     }
     @Override
-    public Vraag getVraag(String vraagnummer) {
-        return null;
+    public String getVraag() {
+        return vraag;
     }
 
     public boolean controleerAntwoord(String antwoord) {

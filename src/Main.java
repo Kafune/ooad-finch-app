@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,8 +8,15 @@ public class Main {
         finch.startQuiz("Steven");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Selecteer Vragenlijst:");
-        String antwoord = scanner.nextLine();
+        MockVragenlijst mockVragenlijst = new MockVragenlijst();
+        var vragenlijsten = mockVragenlijst.getNieuweVragenlijst();
+
+            System.out.println("Selecteer Vragenlijst:");
+            for (int i = 0; i < vragenlijsten.size(); i++) {
+                System.out.println(vragenlijsten.get(i).getVraag());
+                String antwoord = scanner.nextLine();
+            }
+
 
     }
 }
