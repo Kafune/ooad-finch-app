@@ -4,29 +4,27 @@ import java.util.List;
 
 public class Finch {
 
-    private Account acc;
-    private Vragenlijst vl;
+    private Account acc = new Account("Kachung", "test123", "test@test.com");
 
-    private MockData mockData;
+    private MockData mockData = new MockData();
 
     Finch(){
         Date date;
         Calendar c = Calendar.getInstance();
                 c.add(Calendar.YEAR, 1);
         date = c.getTime();
-//        account.voegVragenlijstToe(vl.getVragen(), date);
+//        acc.voegVragenlijstToe(vl.getVragen(), date);
     }
-    public void startQuiz(String gebruikersnaam, String naamVragenlijst) {
-        vl = vl.getVragenlijst(naamVragenlijst);
+    public Quiz startQuiz(String gebruikersnaam, String naamVragenlijst) {
+        Vragenlijst vl = mockData.getMockVragenlijst();
         acc = getAccount(gebruikersnaam);
-//        return vl;
+        return acc.startQuiz(vl);
     }
 
     public Account getAccount(String gebruikersnaam) {
-
-    }
-
-    public Vragenlijst getVragenlijst(String naamVragenlijst) {
-
+        if(acc.getGebruikersnaam().equals(gebruikersnaam)) {
+            return acc;
+        }
+        return null;
     }
 }

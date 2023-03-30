@@ -2,6 +2,9 @@ public class Tijd {
     private int minuten;
     private int seconden;
 
+    Tijd() {
+        startDoorloopTijd();
+    }
     public void startDoorloopTijd() {
 
     }

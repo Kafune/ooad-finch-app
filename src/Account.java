@@ -29,7 +29,19 @@ public class Account {
         return new Account(gebruikersnaam, "test123", "test@test.com");
     }
 
+    public String getGebruikersnaam() {
+        return gebruikersnaam;
+    }
+
+//    public void voegVragenlijstToe(Vragenlijst vl, Date datumVandaag) {
+//
+//    }
+
     public void setSaldo(int saldo) {
         this.saldo = saldo;
+    }
+
+    public Quiz startQuiz(Vragenlijst vl) {
+        return new Quiz(vl);
     }
 }

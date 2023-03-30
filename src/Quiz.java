@@ -2,9 +2,15 @@ import java.util.List;
 
 public class Quiz {
     private int aantalCorrecteAntwoorden;
-//    private Tijd tijd;
+    private Vragenlijst vragen;
 
-    public Quiz(List<Vraag> vragen) {
-        
+    Tijd tijd;
+
+    public Quiz(Vragenlijst vragen) {
+        tijd = new Tijd();
+    }
+
+    public Tijd getTijd() {
+        return tijd;
     }
 }
