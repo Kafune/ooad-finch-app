@@ -1,5 +1,5 @@
 public interface IPuntenStrategy {
 
-    int berekenBonus(int aantalCorrect, Account account, Tijd tijd);
+    int berekenBonus(int aantalCorrect, boolean alleVragenGoed, Tijd tijd);
     int berekenTotaal(int bonuspunten);
 }

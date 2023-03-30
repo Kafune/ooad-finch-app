@@ -1,7 +1,7 @@
 
 public class TweedeVersie implements IPuntenStrategy {
     @Override
-    public int berekenBonus(int aantalCorrect, Account account, Tijd tijd) {
+    public int berekenBonus(int aantalCorrect, boolean alleVragenGoed, Tijd tijd) {
         return 0;
     }
 

@@ -1,7 +1,7 @@
 public class Initieel implements IPuntenStrategy {
 
     @Override
-    public int berekenBonus(int aantalCorrect, Account account, Tijd tijd) {
+    public int berekenBonus(int aantalCorrect, boolean alleVragenGoed, Tijd tijd) {
         int bonuspoints = 0;
         bonuspoints += bonuspoints * aantalCorrect;
         int timepoints = bonuspoints - tijd.getMinuten();
@@ -10,11 +10,15 @@ public class Initieel implements IPuntenStrategy {
             timepoints = 1;
         }
 
+        if(alleVragenGoed) {
+            bonuspoints += 5;
+        }
+
         return bonuspoints + timepoints;
     }
 
     @Override
     public int berekenTotaal(int bonuspunten) {
-        return 0;
+        return bonuspunten + 10;
     }
 }

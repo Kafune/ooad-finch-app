@@ -8,13 +8,6 @@ public class Finch {
     Vragenlijst vl;
     private MockData mockData = new MockData();
 
-    Finch(){
-        Date date;
-        Calendar c = Calendar.getInstance();
-                c.add(Calendar.YEAR, 1);
-        date = c.getTime();
-//        acc.voegVragenlijstToe(vl.getVragen(), date);
-    }
     public Quiz startQuiz(String gebruikersnaam, String naamVragenlijst) {
         vl = mockData.getMockVragenlijst();
         vl.setOnderwerp(naamVragenlijst);

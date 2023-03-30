@@ -28,6 +28,4 @@ public class Vragenlijst {
     public void setOnderwerp(String onderwerp) {
         this.onderwerp = onderwerp;
     }
-
-
 }
