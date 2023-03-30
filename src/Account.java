@@ -7,6 +7,7 @@ public class Account {
 
     private String emailadres;
     private int saldo;
+    private Quiz quiz;
 
     private List<VragenlijstDetails> vragenlijstDetailsList;
 
@@ -14,14 +15,18 @@ public class Account {
         return getVragenlijstDetails();
     }
 
+    public Quiz getQuiz() {
+        return quiz;
+    }
 
     public Account(String gebruikersnaam, String wachtwoord, String emailadres) {
         this.gebruikersnaam = gebruikersnaam;
         this.wachtwoord = wachtwoord;
         this.emailadres = emailadres;
+    }
 
 //        MockData mockData = new MockData();
-    }
+
     public Account getAccount(String gebruikersnaam) {
         if(this.gebruikersnaam.equals(gebruikersnaam)) {
             return this;

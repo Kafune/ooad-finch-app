@@ -17,6 +17,8 @@ public class Finch {
     }
     public Quiz startQuiz(String gebruikersnaam, String naamVragenlijst) {
         vl = mockData.getMockVragenlijst();
+
+        vl.setVragenlijst(vl.vragen);
         vl.setOnderwerp(naamVragenlijst);
         acc = getAccount(gebruikersnaam);
         return acc.startQuiz(vl);

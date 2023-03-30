@@ -74,4 +74,10 @@ public class MockData {
     public Vragenlijst getMockVragenlijst() {
         return vragenlijst;
     }
+    public List<Vraag> getVragen() {
+        return vragen;
+    }
+    public void setMockVragenlijst(List<Vraag> vragen) {
+        this.vragen = vragen;
+    }
 }
