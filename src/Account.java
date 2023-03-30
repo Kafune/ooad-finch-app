@@ -8,6 +8,7 @@ public class Account {
 
     private String emailadres;
     private int saldo;
+    private Quiz quiz;
 
     private MockAccount mockAccount = new MockAccount();
 
@@ -15,6 +16,10 @@ public class Account {
 
     public List<Vraag> getVragenlijsten() {
         return vragenlijsten;
+    }
+
+    public Quiz getQuiz() {
+        return quiz;
     }
 
     public void voegVragenlijstToe(List<Vraag> vragenlijst, Date datumVandaag) {
@@ -25,6 +30,7 @@ public class Account {
         this.gebruikersnaam = gebruikersnaam;
         this.wachtwoord = wachtwoord;
         this.emailadres = emailadres;
+        quiz = new Quiz(vragenlijsten);
     }
 
     public Account getAccount(String gebruikersnaam) {

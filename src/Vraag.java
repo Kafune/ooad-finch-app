@@ -3,6 +3,8 @@ public abstract class Vraag {
     private String vraag;
 
     public abstract String getVraag();
+
+    public abstract boolean controleerAntwoord(String antwoord);
     public Vraag getVraagType() {
         return null;
     }

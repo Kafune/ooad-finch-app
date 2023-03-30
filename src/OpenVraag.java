@@ -14,8 +14,9 @@ public class OpenVraag extends Vraag {
         return huidigeVraag;
     }
 
-    public boolean controleerAntwoord(List<String> antwoord) {
-        return false;
+    @Override
+    public boolean controleerAntwoord(String antwoord) {
+        return true;
     }
 
     private List<String> getCorrecteAntwoorden(int vraagNummer) {

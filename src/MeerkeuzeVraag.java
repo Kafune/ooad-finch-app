@@ -2,6 +2,11 @@ import java.util.List;
 
 public class MeerkeuzeVraag extends Vraag {
     private String vraag;
+
+    public List<String> getAntwoorden() {
+        return antwoorden;
+    }
+
     private List<String> antwoorden;
     private String juisteAntwoord;
 
@@ -16,7 +21,7 @@ public class MeerkeuzeVraag extends Vraag {
     }
 
     public boolean controleerAntwoord(String antwoord) {
-        return false;
+        return true;
     }
 
     private String getCorrectAntwoord() {

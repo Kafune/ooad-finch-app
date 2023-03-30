@@ -29,6 +29,10 @@ public class Finch {
         return account;
     }
 
+    public Quiz getKennisquiz() {
+        return account.getQuiz();
+    }
+
 //    private List<Vragenlijst> getVragenlijsten() {
 //        return null;
 //    }

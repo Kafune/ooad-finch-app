@@ -3,10 +3,14 @@ public class Antwoord {
 
     private Vraag huidigeVraag;
 
-    public Antwoord(String antwoord, Vraag huidigeVraag) {
-        this.antwoord = antwoord;
+    public Antwoord(Vraag huidigeVraag, String antwoord) {
         this.huidigeVraag = huidigeVraag;
+        this.antwoord = antwoord;
     }
+    public String getAntwoord() {
+        return antwoord;
+    }
+
 
 //    public Vraag controleerAntwoord() {
 //        if (huidigeVraag.getAntwoord().equals(antwoord)) {
