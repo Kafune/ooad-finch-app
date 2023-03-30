@@ -6,6 +6,10 @@ public class Tijd {
 
     }
 
+    public int getMinuten() {
+        return minuten;
+    }
+
     public String stopDoorloopTijd(){
         return minuten + ":" + seconden;
     }

@@ -1,4 +1,4 @@
-public class TweedeVersie implements PuntenStrategy {
+public class TweedeVersie implements IPuntenStrategy {
     @Override
     public int berekenBonus(int aantalCorrect, Account account, Tijd tijd) {
         return 0;
