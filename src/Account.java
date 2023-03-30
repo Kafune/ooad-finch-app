@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Account {
@@ -10,14 +11,14 @@ public class Account {
 
     private MockAccount mockAccount = new MockAccount();
 
-    public List<MockVragenlijst> getVragenlijsten() {
+    private List<Vraag> vragenlijsten = new ArrayList<>();
+
+    public List<Vraag> getVragenlijsten() {
         return vragenlijsten;
     }
 
-    private List<MockVragenlijst> vragenlijsten = new ArrayList<>();
-
-    public void voegVragenlijstToe(List<MockVragenlijst> vragenlijsten) {
-        this.vragenlijsten = vragenlijsten;
+    public void voegVragenlijstToe(List<Vraag> vragenlijst, Date datumVandaag) {
+        this.vragenlijsten = vragenlijst;
     }
 
     public Account(String gebruikersnaam, String wachtwoord, String emailadres) {
@@ -27,13 +28,15 @@ public class Account {
     }
 
     public Account getAccount(String gebruikersnaam) {
-
         List<Account> accounts = mockAccount.getAccounts();
         for (Account account : accounts) {
             if (gebruikersnaam.equals(this.gebruikersnaam)) {
+                System.out.println(account);
                 return account;
             }
         }
+
+
         return null;
     }
 

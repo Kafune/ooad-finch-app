@@ -55,7 +55,7 @@ public class MockVragenlijst {
         add("D. We Are!");
     }},"D");
 
-    private List<Vraag> voegVragenToe() {
+    public List<Vraag> getNieuweVragenlijst() {
         vragen.add(vraag1);
         vragen.add(vraag2);
         vragen.add(vraag3);

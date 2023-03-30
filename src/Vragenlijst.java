@@ -1,4 +1,21 @@
+import java.util.List;
+
 public class Vragenlijst {
+    int vragenlijstNummer;
+    List<Vraag> vragen;
+
+    Vragenlijst() {
+        MockVragenlijst mockVragenlijst = new MockVragenlijst();
+        vragen = mockVragenlijst.getNieuweVragenlijst();
+        vragenlijstNummer = 1;
+    }
+
+    public int getVragenlijstNummer() {
+        return vragenlijstNummer;
+    }
+    public List<Vraag> getVragen() {
+        return vragen;
+    }
 
 //    private String onderwerp;
 //
