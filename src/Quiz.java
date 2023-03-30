@@ -5,6 +5,6 @@ public class Quiz {
 //    private Tijd tijd;
 
     public Quiz(List<Vraag> vragen) {
-
+        
     }
 }
