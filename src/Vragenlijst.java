@@ -1,11 +1,23 @@
 public class Vragenlijst {
-    private String onderwerp;
-    public double getPrijs(){
-        // TODO: implement
-        return 0.0;
-    }
-    public Vragenlijst getVragenlijst(String naamVragenlijst){
-        // TODO: implement
-        return null;
-    }
+
+//    private String onderwerp;
+//
+//    private double prijs;
+//
+//    private Finch finch;
+//
+//    private Thema thema;
+//
+//    private Vraag[] vraag;
+//
+//    private VragenlijstDetails[] vragenlijstDetails;
+//
+//    public double getPrijs() {
+//        return 0;
+//    }
+//
+//    public Vragenlijst getVragenlijst(String naamVragenlijst) {
+//        return null;
+//    }
+
 }
