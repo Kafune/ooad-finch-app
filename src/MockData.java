@@ -3,7 +3,7 @@ import java.util.List;
 
 public class MockData {
     List<Vraag> vragen = new ArrayList<>();
-    Vragenlijst vragenlijst;
+    Vragenlijst vragenlijst = new Vragenlijst(1, "Muziek", maakNieuweVragenlijst());
 
     private Vraag vraag1 = new OpenVraag("Welke reggae zanger stierf op 11 mei 1981?", new ArrayList<>() {{
         add("Bob Marley");
@@ -55,10 +55,6 @@ public class MockData {
         add("C. One Day");
         add("D. We Are!");
     }},"D");
-
-    MockData() {
-        vragenlijst = new Vragenlijst(1, "Muziek", maakNieuweVragenlijst());
-    }
 
     public List<Vraag> maakNieuweVragenlijst() {
         vragen.add(vraag1);

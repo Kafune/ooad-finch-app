@@ -25,5 +25,9 @@ public class Vragenlijst {
         this.vragen = vragen;
     }
 
+    public void setOnderwerp(String onderwerp) {
+        this.onderwerp = onderwerp;
+    }
+
 
 }

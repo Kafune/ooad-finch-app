@@ -5,7 +5,7 @@ import java.util.List;
 public class Finch {
 
     private Account acc = new Account("Kachung", "test123", "test@test.com");
-
+    Vragenlijst vl;
     private MockData mockData = new MockData();
 
     Finch(){
@@ -16,7 +16,8 @@ public class Finch {
 //        acc.voegVragenlijstToe(vl.getVragen(), date);
     }
     public Quiz startQuiz(String gebruikersnaam, String naamVragenlijst) {
-        Vragenlijst vl = mockData.getMockVragenlijst();
+        vl = mockData.getMockVragenlijst();
+        vl.setOnderwerp(naamVragenlijst);
         acc = getAccount(gebruikersnaam);
         return acc.startQuiz(vl);
     }

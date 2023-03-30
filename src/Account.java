@@ -33,15 +33,13 @@ public class Account {
         return gebruikersnaam;
     }
 
-//    public void voegVragenlijstToe(Vragenlijst vl, Date datumVandaag) {
-//
-//    }
-
     public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
 
     public Quiz startQuiz(Vragenlijst vl) {
-        return new Quiz(vl);
+        Quiz quiz = new Quiz(vl);
+        quiz.setVragen(vl);
+        return quiz;
     }
 }

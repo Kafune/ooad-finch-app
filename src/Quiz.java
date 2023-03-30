@@ -13,4 +13,7 @@ public class Quiz {
     public Tijd getTijd() {
         return tijd;
     }
+    public void setVragen(Vragenlijst vragen) {
+        this.vragen = vragen;
+    }
 }
